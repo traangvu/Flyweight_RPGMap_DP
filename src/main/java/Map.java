@@ -1,6 +1,6 @@
 import java.util.Random;
 
-abstract class Map {
+public abstract class Map {
     protected int width;
     protected int height;
     protected Tile[][] grid;
@@ -15,21 +15,11 @@ abstract class Map {
 
     abstract Tile createTile();
 
-    // Generate the map using the factory method
     private void generateMap() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 grid[i][j] = createTile();
             }
-        }
-    }
-
-    public void display() {
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                System.out.print(grid[i][j].getCharacter() + " ");
-            }
-            System.out.println();
         }
     }
 
@@ -44,5 +34,4 @@ abstract class Map {
     public int getHeight() {
         return height;
     }
-
 }

@@ -10,21 +10,31 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Map cityMap = new CityMap(10, 5);
-        Map wildernessMap = new WildernessMap(10, 5);
+        /*Map cityMap = new CityMap(10, 5);
 
-        int mapWidth = cityMap.getWidth();
-        int mapHeight = cityMap.getHeight();
+        int cityMapWidth = cityMap.getWidth();
+        int cityMapHeight = cityMap.getHeight();
 
-        Canvas canvas = new Canvas(mapWidth * TILE_SIZE, mapHeight * TILE_SIZE);
+        Canvas canvas = new Canvas(cityMapWidth * TILE_SIZE, cityMapHeight * TILE_SIZE);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        MapRenderer.render(gc, cityMap);
+        MapRenderer.render(gc, cityMap);*/
+        //Scene scene = new Scene(root, cityMapWidth * TILE_SIZE, cityMapHeight * TILE_SIZE);
+
+
+        Map wildernessMap = new WildernessMap(10, 5);
+        int wildernessMapWidth = wildernessMap.getWidth();
+        int wildernessMapHeight = wildernessMap.getHeight();
+        Canvas canvas = new Canvas(wildernessMapWidth * TILE_SIZE, wildernessMapHeight * TILE_SIZE);
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+
+        MapRenderer.render(gc, wildernessMap);
 
         Pane root = new Pane(canvas);
-        Scene scene = new Scene(root);
 
-        primaryStage.setTitle("RPG Map - Flyweight Rendering");
+        Scene scene = new Scene(root, wildernessMapWidth * TILE_SIZE, wildernessMapHeight * TILE_SIZE);
+
+        primaryStage.setTitle("RPG Map - Flyweight");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

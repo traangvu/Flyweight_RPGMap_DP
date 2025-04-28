@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="your.package.GameController">
-    <Canvas fx:id="mapCanvas" width="320.0" height="160.0" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"/>
-</AnchorPane>

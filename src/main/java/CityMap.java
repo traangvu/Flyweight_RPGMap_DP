@@ -1,4 +1,5 @@
-class CityMap extends Map {
+public class CityMap extends Map {
+
     public CityMap(int width, int height) {
         super(width, height);
     }
