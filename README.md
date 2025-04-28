@@ -55,5 +55,6 @@ Without Flyweight:
 With Flyweight:
 * All ForestTile objects reference the same TileGraphic (the "forest.png" image), so there is only one image object for all ForestTile instances, even if there are thousands of them.
 * This significantly reduces memory usage.
-  Conclusion
+  
+
   The Flyweight Pattern in this situation ensures that the tile images are efficiently shared among all tiles of the same type, reducing memory usage and improving performance. The main idea is to avoid the duplication of graphics by storing them once and reusing them across all instances of a tile type, thus making the application more scalable and efficient, especially for large RPG maps.
